@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middmak</title>
+    <link rel="icon" type="image/x-icon" href="/images/Logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <img src="Images/Logo.jpeg" alt="Middmak Logo" onclick="window.location='#'">
+        <div>
+            <a href="AboutUs.html">About Us</a>
+            <a href="WWD.html">What We Do</a>
+            <a href="#why-choose-us">Why Choose Us</a>
+            <a href="#Portfolio">Our Portfolio</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="header-content">
+            <h1>Constructing Rock Solid Relationships.</h1>
+            <p>Your trusted partner for Contracting and Construction services.</p>
+        </div>
+    </header>
+
+    <section id="get-to-know" class="get-to-know">
+        <h2>Get to know us.</h2>
+    </section>
+
+    <section id="video-background" class="video-background">
+        <video autoplay muted loop>
+            <source src="Images/videoplayback.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-content">
+            <h2>Our clients dream, we bring it to reality.</h2>
+            <button onclick="window.location='#services'">See Services</button>
+        </div>
+    </section>
+
+    <section id="why-choose-us" class="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="Images/quality.png" alt="Quality Icon">
+                <h3>Quality</h3>
+            </div>
+            <div class="card">
+                <img src="Images/Integrity.png" alt="Integrity Icon">
+                <h3>Integrity</h3>
+            </div>
+            <div class="card">
+                <img src="Images/CustomerFocus.png" alt="Customer Focus Icon">
+                <h3>Customer Focus</h3>
+            </div>
+            <div class="card">
+                <img src="Images/innovation.png" alt="Innovation Icon">
+                <h3>Innovation</h3>
+            </div>
+            <div class="card">
+                <img src="Images/sustainable.png" alt="Sustainability Icon">
+                <h3>Sustainability</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="slideshow" class="slideshow">
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="Images/beirut.jpg" alt="Slide 1">
+            </div>
+            <div class="slide fade">
+                <img src="Images/sara-calado-Fxs_TgZr-ok-unsplash.jpg" alt="Slide 2">
+            </div>
+            <div class="slide fade">
+                <img src="Images/buildings.jpg" alt="Slide 3">
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">❮</button>
+            <button class="next" onclick="plusSlides(1)">❯</button>
+        </div>
+        <button class="see-projects" onclick="window.location='#projects'">See Projects</button>
+    </section>
+
+    <footer>
+        &copy; 2024 Middmak. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+/* Dark Theme Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Adjust padding */
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+nav div {
+    display: flex;
+    gap: 20px;
+    margin-right: 0; /* Remove right margin */
+}
+
+nav.scrolled {
+    background-color: rgba(18, 18, 18, 0.9); /* Dark navbar on scroll */
+}
+
+nav a {
+    color: #e0e0e0;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: rgba(195, 97, 39, 1);
+    color: white;
+    border-radius: 20px;
+}
+
+nav img {
+    height: 80px;
+    cursor: pointer;
+    width: 80px;
+    margin-left: 0; /* Remove left margin */
+}
+
+/* Hero Section */
+.about-hero {
+    height: 60vh;
+    background: url('Images/about-hero.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+.about-hero .hero-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.about-hero p {
+    font-size: 1.2em;
+}
+
+/* Our Story Section */
+.our-story {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1e1e1e; /* Dark background */
+}
+
+.our-story h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: rgba(195, 97, 39, 255);
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.timeline-item {
+    background: #2c2c2c; /* Dark card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.timeline-item h3 {
+    font-size: 1.5em;
+    color: rgba(195, 97, 39, 255);
+}
+
+/* Team Section */
+.our-team {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1e1e1e; /* Dark background */
+}
+
+.our-team h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: rgba(195, 97, 39, 255);
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: #2c2c2c; /* Dark card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+    color: rgba(195, 97, 39, 255);
+}
+
+/* Core Values Section */
+.core-values {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1e1e1e; /* Dark background */
+}
+
+.core-values h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: rgba(195, 97, 39, 255);
+}
+
+.values-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    background: #2c2c2c; /* Dark card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.value-item i {
+    font-size: 3em;
+    color: rgba(195, 97, 39, 255);
+    margin-bottom: 15px;
+}
+
+.value-item h3 {
+    font-size: 1.5em;
+    color: rgba(195, 97, 39, 255);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1e1e1e; /* Dark background */
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: rgba(195, 97, 39, 255);
+}
+
+.testimonial-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-item {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    background: #2c2c2c; /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+}
+
+.testimonial-item.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 16px;
+    color: rgba(195, 97, 39, 255);
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(195, 97, 39, 0.8);
+    color: white;
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.dot.active, .dot:hover {
+    background-color: rgba(195, 97, 39, 255);
+}
+
+/* Call to Action Section */
+.cta {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(195, 97, 39, 255);
+    color: white;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background: white;
+    color: rgba(195, 97, 39, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f0f0f0;
+}
+
+/* Scroll Effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

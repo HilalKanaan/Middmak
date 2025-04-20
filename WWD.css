@@ -1,0 +1,284 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+/* Header */
+header {
+    position: relative;
+    height: 60vh;
+    background: url('Images/WWD bg2.jpg') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the left */
+    padding: 0 20px;
+    text-align: left;
+    background-attachment: fixed;
+}
+
+.header-content {
+    max-width: 700px;
+    margin-left: 20%;
+    margin-bottom: 15%;
+    margin-top: 30%;
+}
+
+.header-content h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+nav.scrolled {
+    background-color: rgba(18, 18, 18, 0.9); /* Dark background on scroll */
+}
+
+nav div {
+    display: flex;
+    gap: 20px;
+    margin-right: 0; /* Remove right margin */
+}
+
+nav a {
+    color: #e0e0e0;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(195, 97, 39, 1);
+    color: white;
+    border-radius: 20px;
+}
+
+nav img {
+    height: 80px;
+    cursor: pointer;
+    width: 80px;
+    margin-left: 0; /* Remove left margin */
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.card {
+    background: #2c2c2c; /* Dark card background */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+}
+/* Card Slide-In Animation */
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(195, 97, 39, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card i {
+    font-size: 3em;
+    color: rgba(195, 97, 39, 255);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #b0b0b0;
+}
+
+/* Masonry Works Icon */
+.card:nth-child(4) i::before {
+    content: "\f5fd"; /* Unicode for the "cubes" icon */
+}
+
+/* Design Grid */
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px; /* Add padding for better spacing */
+}
+
+.design-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.design-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.design-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.design-card:hover .design-overlay {
+    opacity: 1;
+}
+
+.design-overlay h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.design-overlay p {
+    font-size: 1.2em;
+    color: #e0e0e0;
+}
+
+/* Info Sections */
+.info-section {
+    padding: 60px 20px;
+    background: linear-gradient(145deg, #1e1e1e, #121212); /* Gradient background */
+    color: #e0e0e0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(195, 97, 39, 0.1), transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(195, 97, 39, 0.1), transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+/* Scroll Effects */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
